@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('RFRufo-Regular.eot');
+    src: url('RFRufo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RFRufo-Regular.woff2') format('woff2'),
+        url('RFRufo-Regular.woff') format('woff'),
+        url('RFRufo-Regular.ttf') format('truetype'),
+        url('RFRufo-Regular.svg#RFRufo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('RFRufo-Bold.eot');
+    src: url('RFRufo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('RFRufo-Bold.woff2') format('woff2'),
+        url('RFRufo-Bold.woff') format('woff'),
+        url('RFRufo-Bold.ttf') format('truetype'),
+        url('RFRufo-Bold.svg#RFRufo-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('RFRufo-Light.eot');
+    src: url('RFRufo-Light.eot?#iefix') format('embedded-opentype'),
+        url('RFRufo-Light.woff2') format('woff2'),
+        url('RFRufo-Light.woff') format('woff'),
+        url('RFRufo-Light.ttf') format('truetype'),
+        url('RFRufo-Light.svg#RFRufo-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,17 @@
+@import "../../../../mixins/subTitle.scss";
+
+.products__wrapper {
+    position: relative;
+    .subtitle {
+        @include subTitle;
+        left: auto;
+        right: -148px;
+        transform: translateY(-50%);
+    }
+}
+
+.products {
+    max-width: 872px;
+    display: flex;
+    flex-wrap: wrap;
+}

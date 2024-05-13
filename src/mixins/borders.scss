@@ -1,0 +1,24 @@
+@mixin borders {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 116px;
+        height: 116px;
+        background-color: transparent;
+        border-top: 1px #02e502 solid;
+        border-right: 1px #02e502 solid;
+    }
+
+    &::after {
+        top: -17px;
+        right: -20px;
+    }
+
+    &::before {
+        bottom: -17px;
+        left: -20px;
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,104 @@
+@import "../../../mixins/headline.scss";
+@import "../../../mixins/borders.scss";
+@import "../../../mixins/subTitle.scss";
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1150px;
+}
+
+.method__wrapper {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 61px;
+        left: -174px;
+        display: block;
+        width: 1334px;
+        height: 911px;
+        background-image: url("../../../images/iconLine.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotate(265deg);
+        z-index: -1;
+    }
+    margin-bottom: 160px;
+}
+
+.headline {
+    @include headlineStyle("Дробление капли форсункой");
+}
+
+.leafs {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .subtitle {
+        @include subTitle;
+    }
+    .leaf {
+        min-width: 500px;
+        height: 688px;
+        margin-right: 137px;
+        background-color: #1e1d1d;
+        &:last-child {
+            margin-right: 0;
+        }
+        .leaf__wrapper {
+            width: 362px;
+            margin: 0 auto;
+            .borders {
+                display: inline-block;
+                position: relative;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 116px;
+                    height: 116px;
+                    background-color: transparent;
+                    border-top: 1px #02e502 solid;
+                    border-right: 1px #02e502 solid;
+                }
+
+                &::after {
+                    bottom: 0px;
+                    right: 0px;
+                    transform: rotate(90deg);
+                }
+
+                &::before {
+                    top: 0px;
+                    left: 0px;
+                    transform: rotate(-90deg);
+                }
+                margin-top: 35px;
+                margin-bottom: 62px;
+            }
+            .content {
+                h3 {
+                    font-size: 34px;
+                    font-weight: 300;
+                    margin-bottom: 40px;
+                }
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        font-size: 24px;
+                        font-weight: 300;
+                        margin-bottom: 30px;
+                        img {
+                            margin-right: 24px;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

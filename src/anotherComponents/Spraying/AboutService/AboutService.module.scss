@@ -1,0 +1,16 @@
+@import "../../../mixins/headline.scss";
+
+.headline {
+    @include headlineStyle("Ультрамалообъемное опрыскивание дронами");
+}
+
+.aboutService__wrapper {
+    position: relative;
+    margin-bottom: 160px;
+    .textSize {
+        max-width: 1000px;
+        p {
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background: rgba(24, 24, 24, 0.95);
+    padding: 25px 0 35px 0;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    .menuItems {
+        position: relative;
+        margin-bottom: 30px;
+        .menuItem {
+            display: flex;
+            align-items: center;
+            cursor: default;
+            margin-bottom: 30px;
+            transform: translateX(-20px);
+            &:last-child {
+                margin-bottom: 0;
+            }
+            span {
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .link {
+                color: #ffffff;
+                font-size: 24px;
+                font-weight: 300;
+                text-decoration: none;
+                cursor: pointer;
+                transition: 0.15s ease-in;
+                &:hover {
+                    color: #02e502;
+                }
+            }
+            .activeLink {
+                color: #02e502;
+            }
+        }
+    }
+    .line {
+        width: 227px;
+        height: 1px;
+        background: #ffffff;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .socialNet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .socialMediaImg {
+            width: 30px;
+            height: 30px;
+            margin-right: 25px;
+        }
+    }
+}
+
+.activeMenu {
+    visibility: visible;
+    opacity: 1;
+}

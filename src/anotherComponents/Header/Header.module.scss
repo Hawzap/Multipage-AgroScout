@@ -1,0 +1,134 @@
+@import "../../mixins/circle.scss";
+
+.header__wrapper {
+    display: block;
+    width: 100%;
+    background-color: #151515;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    p {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+}
+
+.logoPic {
+    width: 72px;
+    height: 69px;
+    margin-right: 11px;
+}
+
+.mainInfo {
+    display: flex;
+    align-items: center;
+
+    .socialMedia {
+        display: flex;
+
+        div {
+            @include circle(#01b601);
+
+            &:last-child {
+                margin-right: 71px;
+            }
+        }
+    }
+
+    .langs {
+        display: flex;
+        .activeLang {
+            color: #01b601;
+        }
+        p {
+            font-size: 24px;
+            margin-right: 19px;
+            cursor: pointer;
+            &:last-child {
+                margin-right: 51px;
+            }
+        }
+    }
+
+    .otherThings {
+        display: flex;
+        div {
+            @include circle(#ffffff);
+            cursor: pointer;
+            transition: 0.5s;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            span {
+                position: relative;
+                width: 13px;
+                height: 2px;
+                background-color: #fff;
+                border-radius: 5px;
+                margin-bottom: 3px;
+                margin-left: 5px;
+                transition: 0.5s;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    height: 2px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -5px;
+                }
+            }
+        }
+
+        .activeMenu {
+            border: 3px #01b601 solid;
+            position: relative;
+            span {
+                width: 20px;
+                height: 3px;
+                border-radius: 0;
+                margin-left: 0;
+                &::before {
+                    width: 0;
+                    height: 0;
+                }
+                &:first-child,
+                &:last-child {
+                    position: absolute;
+                    top: 45%;
+                    background-color: #01b601;
+                }
+                &:first-child {
+                    transform: rotate(-45deg);
+                }
+                &:last-child {
+                    transform: rotate(45deg);
+                }
+            }
+            .middle {
+                display: none;
+            }
+        }
+    }
+}

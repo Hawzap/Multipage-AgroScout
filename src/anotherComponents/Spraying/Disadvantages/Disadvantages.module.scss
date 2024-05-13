@@ -1,0 +1,84 @@
+@import "../../../mixins/headline.scss";
+@import "../../../mixins/subTitle.scss";
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1150px;
+}
+
+.spraying__wrapper {
+    margin-bottom: 110px;
+}
+
+.headline {
+    @include headlineStyle("Преимущества опрыскивания с помощью БПЛА");
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    position: relative;
+}
+
+.benefit {
+    min-width: 370px;
+    background-color: #1e1d1d;
+    margin-right: 20px;
+    position: relative;
+    .subtitle {
+        @include subTitle;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    .benefit__wrapper {
+        width: 310px;
+        margin: 0 auto;
+        .title {
+            display: flex;
+            align-items: center;
+            margin: 50px 0 16px 0;
+            img {
+                display: block;
+                width: 36px;
+                height: 36px;
+
+                margin-right: 15px;
+            }
+            h3 {
+                font-size: 22px;
+                font-weight: 300;
+            }
+        }
+        .content {
+            margin-top: 40px;
+            margin-bottom: 66px;
+            ul {
+                li {
+                    display: flex;
+                    align-items: baseline;
+                    margin-bottom: 20px;
+
+                    img {
+                        width: 12px;
+                        height: 12px;
+                        margin-right: 14px;
+                    }
+                    p {
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    hr {
+        width: 100%;
+        height: 1px;
+        background-color: #02e502;
+    }
+}

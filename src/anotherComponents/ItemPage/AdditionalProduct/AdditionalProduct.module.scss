@@ -1,0 +1,188 @@
+@import "../../../mixins/button.scss";
+
+.additprod__wrapper {
+    margin-bottom: 110px;
+}
+
+.mainBlock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product__wrapper {
+    position: relative;
+    width: 278px;
+    height: 475px;
+    background-color: #1e1d1d;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:nth-last-child(2) {
+        margin-right: 44px;
+    }
+}
+
+.mainProduct {
+    &::before {
+        content: "Ваш товар";
+        position: absolute;
+        color: #02e502;
+        font-size: 18px;
+        font-weight: 300;
+        top: 20px;
+        left: 25px;
+    }
+}
+
+.ordinary,
+.lastItem {
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    right: -30px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: 1px #02e502 solid;
+    background-color: #1e1d1d;
+    border-radius: 50%;
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 13px;
+        height: 2.5px;
+        background-color: #fff;
+    }
+}
+
+.ordinary {
+    &::before {
+        transform: translate(-50%, 50%) rotate(90deg);
+    }
+}
+
+.lastItem {
+    &::before {
+        transform: translate(-50%, calc(50% - 3px));
+    }
+    &::after {
+        transform: translate(-50%, calc(50% + 3px));
+    }
+}
+
+.removeItem {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 23px;
+    height: 23px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.product {
+    img {
+        display: block;
+        max-width: 236px;
+        height: 158px;
+        margin: 40px auto 27px auto;
+    }
+
+    h3 {
+        font-size: 27px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .main__info {
+        max-width: 234px;
+        margin: 0 auto;
+    }
+
+    .description {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 30px;
+
+        p:first-child {
+            margin-bottom: 13px;
+        }
+    }
+
+    .price {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    .amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 91px;
+        height: 32px;
+        border: #464646 solid 1px;
+        margin: 0 auto;
+        p {
+            font-size: 24px;
+        }
+        .minus,
+        .plus {
+            font-size: 34px;
+            line-height: 1em;
+            cursor: pointer;
+        }
+        .minus {
+            margin-left: 10px;
+        }
+        .plus {
+            margin-right: 10px;
+        }
+    }
+}
+
+.totalPrice {
+    p {
+        font-size: 48px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    button {
+        display: block;
+        @include buttonStyle(232, 54);
+        margin-bottom: 20px;
+    }
+    .filledBtn {
+        color: black;
+        font-weight: 300;
+        border: #01b601 2px solid;
+        &::after {
+            background-color: #01b601;
+            transform: translate(-50%, -50%) scale(3);
+        }
+        &:hover {
+            color: white;
+
+            &::after {
+                transform: translate(-50%, -50%) scale(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import '../../../mixins/headline.scss';
+
+.benefits__wrapper{
+    margin-bottom: 110px;
+}
+
+.headline{
+    @include headlineStyle('Приемущества внесения энтомофаги')
+}

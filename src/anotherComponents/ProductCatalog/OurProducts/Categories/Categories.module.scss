@@ -1,0 +1,71 @@
+@mixin styleDrop {
+    background-color: transparent;
+    border: 1px #464646 solid;
+    outline: none;
+}
+
+.categories {
+    position: relative;
+    width: 266px;
+    margin-bottom: 30px;
+    .subTitle {
+        position: absolute;
+        top: -63px;
+        left: 0;
+        h3 {
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 7px;
+        }
+    }
+    ul {
+        margin-bottom: 40px;
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #464646;
+}
+.filters {
+    width: 187px;
+    margin-top: 40px;
+    h3 {
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    select {
+        width: 100%;
+        height: 40px;
+        color: white;
+        font-size: 18px;
+        padding-left: 20px;
+        font-family: "RF Rufo";
+        margin-bottom: 30px;
+        @include styleDrop;
+        option {
+            color: black;
+        }
+    }
+    .inputs {
+        display: flex;
+        justify-content: space-between;
+        input {
+            width: 76px;
+            height: 34px;
+            color: white;
+            font-family: "RF Rufo";
+            font-size: 18px;
+            padding-left: 10px;
+            @include styleDrop;
+            &::placeholder {
+                color: white;
+            }
+        }
+    }
+}

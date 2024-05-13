@@ -1,0 +1,84 @@
+@import "../../../mixins/headline.scss";
+@import "../../../mixins/button.scss";
+
+.phtotography__wrapper {
+    margin-bottom: 110px;
+}
+
+.headline {
+    @include headlineStyle("Процесс аэрофотосъемки");
+    margin-bottom: 30px;
+}
+
+.describe {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 31px;
+    margin-bottom: 60px;
+    max-width: 750px;
+}
+
+.tablet {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .tabletImg {
+        margin-right: 94px;
+    }
+    .works {
+        width: 388px;
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 21px;
+                font-weight: 300;
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 50px;
+                }
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 12px;
+                }
+            }
+        }
+        button {
+            @include buttonStyle(287, 68);
+        }
+    }
+    .worksType {
+        margin-bottom: 50px;
+        .worksType_wrapper {
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            p {
+                cursor: pointer;
+            }
+        }
+        .line {
+            position: relative;
+            width: 100%;
+            height: 4px;
+            background-color: #464646;
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 50%;
+                top: 0;
+                left: 0;
+                background-color: #02e502;
+                transition: left 0.5s;
+            }
+        }
+        .activeLine::before {
+            left: 50%;
+        }
+    }
+}

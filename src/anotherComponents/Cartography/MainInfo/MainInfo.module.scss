@@ -1,0 +1,37 @@
+.fontSide {
+    position: relative;
+    padding: 75px 0 70px 0;
+    margin-bottom: 40px;
+}
+.indent {
+    margin-left: 60px;
+    .headline {
+        display: inline-block;
+        max-width: 509px;
+        font-size: 72px;
+        font-weight: 300;
+    }
+    .mainText {
+        font-size: 24px;
+        font-weight: 300;
+        max-width: 535px;
+        line-height: 40px;
+        margin: 50px 0 80px 0;
+    }
+    .infos {
+        display: flex;
+        .info {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            img {
+                width: 40px;
+                height: 40px;
+                margin-right: 12px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}

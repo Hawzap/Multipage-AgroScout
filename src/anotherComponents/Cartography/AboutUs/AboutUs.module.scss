@@ -1,0 +1,11 @@
+@import "../../../mixins/headline.scss";
+
+.headline {
+    @include headlineStyle("Профессиональная аэрофотосъемка");
+}
+.aboutUs__wrapper {
+    margin-bottom: 110px;
+}
+.hidden {
+    position: relative;
+}

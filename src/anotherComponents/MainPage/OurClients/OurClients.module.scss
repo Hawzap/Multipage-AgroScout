@@ -1,0 +1,18 @@
+@import "../../../mixins/headline.scss";
+
+.clients__wrapper {
+    margin-bottom: 110px;
+}
+
+.headline {
+    @include headlineStyle("Партнеры");
+}
+
+.clients {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .client {
+        margin-right: 55px;
+    }
+}

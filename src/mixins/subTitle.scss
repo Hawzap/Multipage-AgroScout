@@ -1,0 +1,15 @@
+@mixin subTitle{
+    position: absolute;
+        top: 50%;
+        left: -148px;
+        display: inline-block;
+        writing-mode: vertical-rl;
+        white-space: nowrap;
+        font-size: 100px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: rgba(70, 70, 70, 0.15);
+        text-shadow: -3px 4px rgba(0, 0, 0, 0.12);
+        transform-origin: top;
+        transform: rotate(180deg) translateY(-50%);
+}

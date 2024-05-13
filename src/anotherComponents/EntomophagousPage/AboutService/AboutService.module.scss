@@ -1,0 +1,11 @@
+@import '../../../mixins/headline.scss';
+
+.aboutService__wrapper{
+    position: relative;
+    margin-bottom: 110px;
+}
+
+.headline{
+    @include headlineStyle('Энтомофаги');
+    margin-bottom: 30px;
+}

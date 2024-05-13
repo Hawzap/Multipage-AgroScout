@@ -1,0 +1,61 @@
+.sublist {
+    margin-top: 20px;
+    margin-left: 30px;
+    li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+li {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.containChild .li__wrapper {
+    height: 30px;
+    overflow-y: clip;
+    transition: 0.4s;
+}
+
+.liContainer {
+    display: flex;
+    align-items: center;
+    .nameContainer {
+        position: relative;
+    }
+    p {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    img {
+        width: 30px;
+        height: 30px;
+        margin-right: 14px;
+    }
+}
+
+.containChild {
+    .nameContainer {
+        .subListToggle,
+        &::after {
+            position: absolute;
+            top: calc(50% + 1px);
+            right: -21px;
+            display: block;
+            width: 10px;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+        .subListToggle {
+            transform: rotate(90deg);
+        }
+        &::after {
+            content: "";
+        }
+    }
+}
+
+.activeList .nameContainer .subListToggle {
+    transform: rotate(0);
+}

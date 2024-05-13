@@ -1,0 +1,23 @@
+@import "../../../mixins/headline.scss";
+
+.bf__block {
+    margin-bottom: 110px;
+}
+
+.headline {
+    @include headlineStyle("Наши преимущества");
+}
+
+.benefits {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 265px;
+        height: 265px;
+        background-image: url("../../../images/drone.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -15%;
+        right: -7.3%;
+    }
+}

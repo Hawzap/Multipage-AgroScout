@@ -1,0 +1,68 @@
+@import "../../../mixins/headline.scss";
+
+.useof__wrapper {
+    margin-bottom: 160px;
+}
+
+.headline {
+    @include headlineStyle("Применение аэрофотосъемки");
+}
+
+.useOF {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -58px;
+        left: -139px;
+        z-index: -1;
+        display: block;
+        width: 982px;
+        height: 836px;
+        background-image: url("../../../images/icons/iconLine1.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            .info {
+                width: 201px;
+            }
+            p {
+                font-size: 24px;
+                font-weight: 300;
+                margin-left: 5px;
+            }
+            img {
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
+            }
+            .line {
+                width: 100%;
+                height: 2px;
+                background-color: #464646;
+                margin-top: 9px;
+            }
+        }
+    }
+    .land {
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 31px;
+            max-width: 725px;
+            margin-bottom: 78px;
+        }
+        img {
+            width: 753px;
+            height: 434px;
+        }
+    }
+}

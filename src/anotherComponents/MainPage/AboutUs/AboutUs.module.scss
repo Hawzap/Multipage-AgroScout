@@ -1,0 +1,55 @@
+@import "../../../mixins/headline.scss";
+
+.aboutUs {
+    position: relative;
+    margin-bottom: 110px;
+}
+
+.headline {
+    @include headlineStyle("О компании");
+}
+
+.info {
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        z-index: 2;
+    }
+    &::before {
+        max-width: 533px;
+        height: 2px;
+        background-color: #8d8b8b;
+    }
+    &::after {
+        width: 127px;
+        height: 50px;
+        background-color: #181818;
+        transform: translate(-50%, 25px) rotate(0deg);
+        background-image: url("../../../images/icons/hideBtn.png");
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 31px;
+    }
+}
+
+.hidenContent {
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(24, 24, 24, 0.8);
+}

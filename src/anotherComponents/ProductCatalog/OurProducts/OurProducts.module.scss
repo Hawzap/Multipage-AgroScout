@@ -1,0 +1,16 @@
+@import "../../../mixins/headline.scss";
+
+.ourProducts__wrapper {
+    margin-bottom: 220px;
+}
+
+.headline {
+    @include headlineStyle("Каталог продукции");
+    margin-bottom: 85px;
+}
+
+.both {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

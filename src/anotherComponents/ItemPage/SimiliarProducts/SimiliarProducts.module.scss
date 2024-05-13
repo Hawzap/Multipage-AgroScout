@@ -1,0 +1,72 @@
+@import "../../../mixins/button.scss";
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1150px;
+}
+
+.similiarproducts__wrapper {
+    margin-bottom: 110px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .product__wrapper {
+        min-width: 364px;
+        height: 599px;
+        background-color: #1e1d1d;
+        margin-right: 19px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .product {
+        img {
+            display: block;
+            max-width: 300px;
+            height: 229px;
+            margin: 0 auto 27px auto;
+        }
+
+        h3 {
+            font-size: 33px;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .main__info {
+            max-width: 288px;
+            margin: 0 auto;
+        }
+
+        .description {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 20px;
+
+            p:first-child {
+                margin-bottom: 13px;
+            }
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        .add {
+            @include buttonStyle(288, 62);
+        }
+    }
+}

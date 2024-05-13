@@ -1,0 +1,118 @@
+@import "../../../mixins/headline.scss";
+@import "../../../mixins/borders.scss";
+@import "../../../mixins/subTitle.scss";
+
+.bug__wrapper {
+    margin-bottom: 110px;
+}
+
+.headline {
+    @include headlineStyle(attr(data-foo));
+    margin-bottom: 30px;
+}
+
+.explanation {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 31px;
+    margin-bottom: 70px;
+}
+
+.bug {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+
+    .subTitle {
+        @include subTitle;
+    }
+
+    .info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        width: 950px;
+        background-color: #1e1d1d;
+        padding: 65px 0 55px 0;
+
+        .border {
+            position: absolute;
+            top: 50%;
+            left: -50%;
+            transform: translate(55%, -50%);
+            @include borders;
+        }
+    }
+
+    .main__info {
+        margin-right: 55px;
+        .paragraph {
+            width: 537px;
+            .bug__info {
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 30px;
+                line-height: 31px;
+            }
+        }
+        .reasons {
+            .subHeadline {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px #02e502 solid;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                }
+                h3 {
+                    font-size: 22px;
+                }
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 56px;
+                width: 456px;
+                li {
+                    display: flex;
+                    font-weight: 300;
+                    font-size: 18px;
+                    width: 92px;
+                    margin-right: 60px;
+                    margin-bottom: 22px;
+                    img {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reversed {
+    justify-content: start;
+    .info {
+        justify-content: start;
+        .border {
+            left: auto;
+            right: -50%;
+            transform: translate(-55%, -50%);
+        }
+    }
+    .subTitle {
+        left: auto;
+        right: -148px;
+        transform: rotate(0deg) translateY(-50%);
+    }
+    .main__info {
+        margin: 0 0 0 55px;
+    }
+}

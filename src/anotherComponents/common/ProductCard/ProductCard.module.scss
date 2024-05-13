@@ -1,0 +1,71 @@
+@import "../../../mixins/button.scss";
+
+.product__wrapper {
+    width: 284px;
+    height: 493px;
+    background-color: #1e1d1d;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    &:nth-child(n + 4) {
+        margin-bottom: 0;
+    }
+    &:nth-child(3) {
+        margin-right: 0;
+    }
+    &:nth-child(6) {
+        margin-right: 0;
+    }
+}
+
+.product {
+    img {
+        display: block;
+        max-width: 236px;
+        height: 158px;
+        margin: 10px auto 27px auto;
+    }
+
+    h3 {
+        font-size: 27px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .main__info {
+        max-width: 234px;
+        margin: 0 auto;
+    }
+
+    .description {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 30px;
+
+        p:first-child {
+            margin-bottom: 13px;
+        }
+    }
+
+    .price {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    .add {
+        @include buttonStyle(234, 62);
+        a {
+            font-family: "RF Rufo";
+            font-size: 28px;
+            font-weight: 300;
+            color: #02e502;
+            text-decoration: none;
+            transition: 0.3s ease-out;
+        }
+        &:hover {
+            a {
+                color: #1e1d1d;
+            }
+        }
+    }
+}

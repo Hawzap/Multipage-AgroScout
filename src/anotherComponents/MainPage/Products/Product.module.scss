@@ -1,0 +1,68 @@
+@import "../../../mixins/headline.scss";
+@import "../../../mixins/button.scss";
+@import "../../../mixins/subTitle.scss";
+
+.products__wrapper {
+    margin-bottom: 110px;
+}
+
+.headline {
+    @include headlineStyle("Наша продукция");
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .leftText {
+        @include subTitle;
+    }
+
+    .product__wrapper {
+        width: 364px;
+        height: 599px;
+        background-color: #1e1d1d;
+        margin-right: 19px;
+    }
+
+    .product {
+        img {
+            display: block;
+            max-width: 300px;
+            height: 229px;
+            margin: 0 auto 27px auto;
+        }
+
+        h3 {
+            font-size: 33px;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .main__info {
+            max-width: 288px;
+            margin: 0 auto;
+        }
+
+        .description {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 20px;
+
+            p:first-child {
+                margin-bottom: 13px;
+            }
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        .add {
+            @include buttonStyle(288, 62);
+        }
+    }
+}

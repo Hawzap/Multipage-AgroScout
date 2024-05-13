@@ -1,0 +1,27 @@
+.fontSide {
+    min-height: 650px;
+    position: relative;
+    margin-bottom: 40px;
+
+    .mainBlock {
+        .indent {
+            margin-left: 60px;
+        }
+
+        .headline {
+            display: inline-block;
+            max-width: 405px;
+            font-size: 60px;
+            font-weight: 300;
+            line-height: 74px;
+            margin-top: 205px;
+            margin-bottom: 120px;
+        }
+        .mainText {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 40px;
+            max-width: 553px;
+        }
+    }
+}

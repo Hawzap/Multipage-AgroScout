@@ -1,0 +1,80 @@
+@import "../../../mixins/headline.scss";
+@import "../../../mixins/button.scss";
+
+.help__wrapper {
+    width: 100%;
+    background-color: #1e1d1d;
+    padding-bottom: 116px;
+    margin-bottom: 110px;
+}
+
+.help__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .help__content {
+        position: relative;
+        z-index: 1;
+    }
+    .droneBg {
+        content: "";
+        position: absolute;
+        top: -117px;
+        right: 0;
+        display: block;
+        width: 46%;
+        height: 96%;
+        z-index: 2;
+    }
+    .linesBg {
+        content: "";
+        position: absolute;
+        top: -24%;
+        right: -3%;
+        display: block;
+        width: 67%;
+        height: 203%;
+        z-index: 1;
+    }
+
+    .headline {
+        @include headlineStyle("Нужна помошь?");
+        margin-bottom: 29px;
+        margin-top: 30px;
+    }
+    .formInfo {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 40px;
+        max-width: 494px;
+        margin-bottom: 39px;
+    }
+    .form {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        input {
+            color: white;
+            font-size: 18px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 1px #4b4a4a solid;
+            padding-bottom: 11px;
+            padding-left: 11px;
+            margin-right: 42px;
+        }
+        input::placeholder {
+            color: white;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+        button {
+            @include buttonStyle(197, 58);
+        }
+    }
+    .confidence {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}

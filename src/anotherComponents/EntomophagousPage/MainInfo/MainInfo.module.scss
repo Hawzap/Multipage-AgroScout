@@ -1,0 +1,58 @@
+.fontSide {
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 70px;
+
+    .mainBlock {
+        .indent {
+            margin-left: 60px;
+        }
+
+        .headline {
+            display: inline-block;
+            max-width: 400px;
+            font-size: 60px;
+            font-weight: 300;
+            line-height: 74px;
+            margin: 69px 0 40px 0;
+        }
+
+        .mainText {
+            font-size: 24px;
+            font-weight: 300;
+            width: 400px;
+            line-height: 40px;
+            margin-bottom: 69px;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 700px;
+
+            .food {
+                display: flex;
+                align-items: center;
+                margin-right: 21px;
+                margin-bottom: 36px;
+
+                p {
+                    width: 150px;
+                    font-size: 18px;
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border: 2px #02e502 solid;
+                    border-radius: 50%;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}

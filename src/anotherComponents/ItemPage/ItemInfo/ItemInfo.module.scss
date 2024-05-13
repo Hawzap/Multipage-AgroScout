@@ -1,0 +1,159 @@
+@import "../../../mixins/button.scss";
+
+.item__wrapper {
+    margin: 40px auto 80px auto;
+}
+
+.itemInfoBlock {
+    display: flex;
+    flex-wrap: wrap;
+    .itemPictures {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 70px;
+        max-width: 610px;
+        padding-bottom: 18px;
+        span {
+            border: #464646 solid 1px;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .downPhoto {
+            width: 190px;
+            height: 160px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .mainPhoto {
+            width: 100%;
+            height: 370px;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+        .activePhoto {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: calc(100% / 2);
+                height: 1px;
+                background-color: #02e502;
+                bottom: -18px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .itemInfo {
+        .itemName {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+        .article {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+        .columns {
+            display: flex;
+            margin-bottom: 50px;
+            ul {
+                margin-right: 15px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    p {
+                        font-weight: 300;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        object-fit: contain;
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+        .description {
+            display: inline-block;
+            position: relative;
+            font-size: 18px;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: #464646;
+            }
+        }
+        .price {
+            display: flex;
+            & > p {
+                font-size: 30px;
+                margin-right: 40px;
+            }
+            .amount {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 91px;
+                height: 32px;
+                border: #464646 solid 1px;
+                margin-bottom: 50px;
+                p {
+                    font-size: 24px;
+                }
+                .minus,
+                .plus {
+                    font-size: 34px;
+                    line-height: 1em;
+                    cursor: pointer;
+                }
+                .minus {
+                    margin-left: 10px;
+                }
+                .plus {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .buttons {
+            button {
+                @include buttonStyle(214, 62);
+                font-size: 26px;
+                margin-right: 20px;
+            }
+            .filled {
+                color: black;
+                font-weight: 300;
+                border: #01b601 2px solid;
+                &::after {
+                    background-color: #01b601;
+                    transform: translate(-50%, -50%) scale(3);
+                }
+                &:hover {
+                    color: white;
+
+                    &::after {
+                        transform: translate(-50%, -50%) scale(0);
+                    }
+                }
+            }
+        }
+    }
+}

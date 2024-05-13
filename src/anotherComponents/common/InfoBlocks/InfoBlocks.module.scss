@@ -1,0 +1,59 @@
+@import "../../../mixins/subTitle.scss";
+
+.benefits__wrapper {
+    position: relative;
+    .leftText {
+        @include subTitle;
+    }
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .benefit__wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 20px 20px 0;
+        min-width: 362px;
+        min-height: 258px;
+        background-color: rgba(30, 29, 29, 1);
+        position: relative;
+        z-index: 2;
+        &:nth-last-child(-n + 3) {
+            margin-bottom: 0;
+        }
+        .benefit {
+            max-width: 278px;
+            .benefit__title {
+                display: flex;
+                align-items: center;
+                margin: 37px 0 25px 0;
+                img {
+                    margin-right: 15px;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 31px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.bgImage {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 265px;
+        height: 265px;
+        background-image: url("../../../images/drone.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -15%;
+        right: -7.3%;
+    }
+}
