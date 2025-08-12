@@ -15,7 +15,8 @@ import { NavLink } from "react-router-dom";
 export const Menu: React.FC<{
     isActive: boolean;
     menuItemsRef: { current: HTMLDivElement | null };
-}> = ({ isActive, menuItemsRef }) => {
+    setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ isActive, menuItemsRef, setIsActive }) => {
     const menuItems = [
         {
             icon: main,
@@ -67,7 +68,12 @@ export const Menu: React.FC<{
             <ul className={s.menuItems}>
                 {menuItems.map((e) => {
                     return (
-                        <li className={s.menuItem}>
+                        <li
+                            className={s.menuItem}
+                            onClick={() => {
+                                setIsActive(false);
+                            }}
+                        >
                             <span>
                                 <img src={e.icon} alt={e.title} />
                             </span>

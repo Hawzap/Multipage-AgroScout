@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { AboutOurCompany } from "./anotherComponents/AboutOurCompany/AboutOurCompany";
 import { Cartography } from "./anotherComponents/Cartography/Cartography";
 import { EntomophagousPage } from "./anotherComponents/EntomophagousPage/EntomophagousPage";
@@ -16,6 +16,10 @@ function App() {
         <>
             <Header />
             <Routes>
+                <Route
+                    path="/Multipage-AgroScout"
+                    element={<Navigate to="/" />}
+                />
                 <Route path="/" element={<MainPage />} />
                 <Route path="/entomophagous" element={<EntomophagousPage />} />
                 <Route path="/news" element={<News />} />

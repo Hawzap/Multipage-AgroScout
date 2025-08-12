@@ -1,4 +1,5 @@
 import s from "./ProductCard.module.scss";
+import { Link } from "react-router-dom";
 type ProductProps = {
     product: {
         name: string;

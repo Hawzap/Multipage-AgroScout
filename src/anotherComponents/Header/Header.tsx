@@ -91,7 +91,11 @@ export const Header: React.FC = () => {
                         </div>
                     </div>
                 </nav>
-                <Menu isActive={isActive} menuItemsRef={menuItemsRef} />
+                <Menu
+                    isActive={isActive}
+                    menuItemsRef={menuItemsRef}
+                    setIsActive={setIsActive}
+                />
             </div>
         </header>
     );
