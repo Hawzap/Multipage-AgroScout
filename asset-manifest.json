@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Multipage-AgroScout/static/css/main.0d90a292.css",
-    "main.js": "/Multipage-AgroScout/static/js/main.1c12c767.js",
+    "main.js": "/Multipage-AgroScout/static/js/main.c3ecfbc2.js",
     "static/js/787.449cc636.chunk.js": "/Multipage-AgroScout/static/js/787.449cc636.chunk.js",
     "static/media/Cartography.png": "/Multipage-AgroScout/static/media/Cartography.2a383d4fc2234263bf85.png",
     "static/media/bgproductcatalog.jpg": "/Multipage-AgroScout/static/media/bgproductcatalog.a29db23f66513e48d467.jpg",
@@ -124,11 +124,11 @@
     "static/media/aboutUs.svg": "/Multipage-AgroScout/static/media/aboutUs.8c3188d1c6d1a49c4ed488ac04293f6d.svg",
     "static/media/iconCheck.svg": "/Multipage-AgroScout/static/media/iconCheck.fea37a012421a4f959d73aae68c87b75.svg",
     "main.0d90a292.css.map": "/Multipage-AgroScout/static/css/main.0d90a292.css.map",
-    "main.1c12c767.js.map": "/Multipage-AgroScout/static/js/main.1c12c767.js.map",
+    "main.c3ecfbc2.js.map": "/Multipage-AgroScout/static/js/main.c3ecfbc2.js.map",
     "787.449cc636.chunk.js.map": "/Multipage-AgroScout/static/js/787.449cc636.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d90a292.css",
-    "static/js/main.1c12c767.js"
+    "static/js/main.c3ecfbc2.js"
   ]
 }
